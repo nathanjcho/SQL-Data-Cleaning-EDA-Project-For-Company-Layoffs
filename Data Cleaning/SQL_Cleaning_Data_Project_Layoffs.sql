@@ -176,3 +176,11 @@ FROM layoffs_staging3;
 #Drop row_num column
 ALTER TABLE layoffs_staging3
 DROP COLUMN row_num;
+
+#Change date column type from string to date
+ALTER TABLE layoffs_staging3
+MODIFY COLUMN total_laid_off INT,
+MODIFY COLUMN funds_raised_millions INT;
+
+SELECT *
+FROM layoffs_staging3;
